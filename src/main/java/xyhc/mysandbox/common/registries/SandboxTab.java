@@ -4,7 +4,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class AlterCreativeTab {
+public class SandboxTab {
     public static final CreativeModeTab SANDBOX_TAB = new CreativeModeTab("tab_sandbox") {
         @Override
         public ItemStack makeIcon() {

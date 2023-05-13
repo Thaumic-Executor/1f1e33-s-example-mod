@@ -8,19 +8,15 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import xyhc.mysandbox.Mysandbox;
-import xyhc.mysandbox.common.registries.AlterCreativeTab;
+import xyhc.mysandbox.common.registries.SandboxTab;
 
 import java.util.Random;
 
 public class ShouterItem extends Item {
-    static String ShouterItemId="shouter_item";
     Random myRand = new Random();
 
     public ShouterItem(){
-        super(new Item.Properties().fireResistant().durability(114).tab(AlterCreativeTab.SANDBOX_TAB));
+        super(new Item.Properties().fireResistant().durability(114).tab(SandboxTab.SANDBOX_TAB));
     }
 
     @Override
@@ -31,9 +27,4 @@ public class ShouterItem extends Item {
         return InteractionResultHolder.pass(pPlayer.getItemInHand(pUsedHand));
     }
 
-    @SubscribeEvent
-    public static void onRegisterItem( RegistryEvent.Register<Item> event)
-    {
-        event.getRegistry().register(new ShouterItem().setRegistryName(Mysandbox.MOD_ID,ShouterItemId));
-    }
 }

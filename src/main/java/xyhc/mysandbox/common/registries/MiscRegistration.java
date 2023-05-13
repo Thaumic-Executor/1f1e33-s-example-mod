@@ -9,6 +9,6 @@ import xyhc.mysandbox.Mysandbox;
 public class MiscRegistration {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Mysandbox.MOD_ID);
     public static final RegistryObject<Item> SALT_ITEM =
-            ITEMS.register("salt_item", ()->new Item( new Item.Properties().tab(AlterCreativeTab.SANDBOX_TAB) ) );
+            ITEMS.register("salt_item", ()->new Item( new Item.Properties().tab(SandboxTab.SANDBOX_TAB) ) );
 
 }
